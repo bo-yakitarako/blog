@@ -1,3 +1,12 @@
+packages:
+  - '.'
+
+# pnpm 10 用（Cloudflare のビルド環境は 10.11.1）
+onlyBuiltDependencies:
+  - esbuild
+  - sharp
+
+# pnpm 11 用
 allowBuilds:
   esbuild: true
   sharp: true
