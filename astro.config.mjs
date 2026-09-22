@@ -14,6 +14,7 @@ export default defineConfig({
 			name: 'Noto Sans JP',
 			cssVariable: '--font-noto-sans-jp',
 			fallbacks: ['sans-serif'],
+			optimizedFallbacks: false,
 			weights: ['400', '700'],
 			styles: ['normal'],
 		},

@@ -5,13 +5,43 @@ import { SITE_TITLE } from '../consts';
 <header>
 	<nav>
 		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<button class="theme-toggle" type="button" aria-label="Toggle theme">
+			<svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" width="24" height="24">
+				<circle cx="12" cy="12" r="5" fill="currentColor"></circle>
+				<path
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					d="M12 2v2m0 16v2M4.22 4.22l1.42 1.42m12.72 12.72 1.42 1.42M2 12h2m16 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
+				></path>
+			</svg>
+			<svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" width="24" height="24">
+				<path
+					fill="currentColor"
+					d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"
+				></path>
+			</svg>
+		</button>
 	</nav>
 </header>
+
+<script is:inline>
+	const root = document.documentElement;
+	document.querySelector('.theme-toggle')?.addEventListener('click', () => {
+		const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+		root.dataset.theme = next;
+		localStorage.setItem('theme', next);
+	});
+</script>
 <style>
 	header {
+		position: sticky;
+		top: 0;
+		z-index: 10;
 		margin: 0;
-		padding: 0 1em;
-		background: white;
+		padding: 0.5em 1em;
+		background: rgb(var(--surface));
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
 	}
 	h2 {
@@ -26,10 +56,33 @@ import { SITE_TITLE } from '../consts';
 	nav {
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 	}
 	nav a {
 		padding: 1em 0.5em;
 		color: var(--black);
 		text-decoration: none;
+	}
+	.theme-toggle {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0.5em;
+		background: none;
+		border: none;
+		color: rgb(var(--gray-dark));
+		cursor: pointer;
+	}
+	.theme-toggle:hover {
+		color: var(--accent);
+	}
+	.theme-toggle .icon-moon {
+		display: none;
+	}
+	:global([data-theme='light']) .theme-toggle .icon-sun {
+		display: none;
+	}
+	:global([data-theme='light']) .theme-toggle .icon-moon {
+		display: block;
 	}
 </style>
