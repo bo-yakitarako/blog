@@ -9,6 +9,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "ogp": "node templates/generate-ogp.mjs",
     "astro": "astro"
   },
   "dependencies": {

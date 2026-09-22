@@ -3,6 +3,9 @@ dist/
 # generated types
 .astro/
 
+# downloaded OGP fonts
+templates/fonts/
+
 # dependencies
 node_modules/
 
