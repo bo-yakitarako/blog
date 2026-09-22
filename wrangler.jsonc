@@ -1,0 +1,9 @@
+{
+	// 静的サイトを Cloudflare Workers の静的アセットとして配信する設定。
+	// これがあることで wrangler の Astro 自動構成（astro add cloudflare）が走らない。
+	"name": "blog",
+	"compatibility_date": "2025-09-22",
+	"assets": {
+		"directory": "./dist"
+	}
+}

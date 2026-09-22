@@ -6,6 +6,9 @@ dist/
 # downloaded OGP fonts
 templates/fonts/
 
+# wrangler
+.wrangler/
+
 # dependencies
 node_modules/
 
