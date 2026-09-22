@@ -15,15 +15,17 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<BaseHead title={title} description={description} image={heroImage} />
 		<style>
 			main {
-				width: calc(100% - 2em);
+				width: 100%;
 				max-width: 100%;
 				margin: 0;
+				box-sizing: border-box;
 			}
 			.prose {
-				width: 960px;
-				max-width: calc(100% - 2em);
-				margin: auto;
+				width: 100%;
+				max-width: 960px;
+				margin: 0 auto;
 				padding: 1em;
+				box-sizing: border-box;
 				color: rgb(var(--gray-dark));
 			}
 			.profile-icon {
@@ -54,6 +56,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				.profile-icon {
 					width: 96px;
 					height: 96px;
+				}
+				.prose {
+					padding: 1em 0.5em;
 				}
 			}
 		</style>

@@ -47,14 +47,15 @@ body {
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: rgb(var(--gray-dark));
-	font-size: 20px;
+	font-size: 16px;
 	line-height: 1.7;
 }
 main {
-	width: 720px;
-	max-width: calc(100% - 2em);
-	margin: auto;
+	width: 100%;
+	max-width: 720px;
+	margin: 0 auto;
 	padding: 3em 1em;
+	box-sizing: border-box;
 }
 h1,
 h2,
@@ -67,19 +68,19 @@ h6 {
 	line-height: 1.2;
 }
 h1 {
-	font-size: 3.052em;
+	font-size: 2em;
 }
 h2 {
-	font-size: 2.441em;
+	font-size: 1.6em;
 }
 h3 {
-	font-size: 1.953em;
+	font-size: 1.35em;
 }
 h4 {
-	font-size: 1.563em;
+	font-size: 1.15em;
 }
 h5 {
-	font-size: 1.25em;
+	font-size: 1em;
 }
 strong,
 b {
@@ -116,12 +117,14 @@ code {
 	padding: 2px 5px;
 	background-color: rgb(var(--gray-light));
 	border-radius: 2px;
+	font-size: 1em;
 }
 pre {
 	padding: 1.5em;
 	border-radius: 8px;
 	background-color: rgb(var(--surface));
 	overflow-x: auto;
+	font-size: 1em;
 }
 pre > code {
 	all: unset;
@@ -130,7 +133,7 @@ blockquote {
 	border-left: 4px solid var(--accent);
 	padding: 0 0 0 20px;
 	margin: 0;
-	font-size: 1.333em;
+	font-size: 1em;
 }
 hr {
 	border: none;
@@ -138,10 +141,10 @@ hr {
 }
 @media (max-width: 720px) {
 	body {
-		font-size: 18px;
+		font-size: 15px;
 	}
 	main {
-		padding: 1em;
+		padding: 1em 0.5em;
 	}
 }
 
