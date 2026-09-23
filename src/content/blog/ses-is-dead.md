@@ -3,7 +3,7 @@ title: 'SES is Dead'
 description: '一般的なSESエンジニアはエンジニアを名乗るな。エンジニアをやめろ'
 heroImage: '../../assets/ses-id-dead.png'
 index: 2
-pubDate: '2026/09/22'
+pubDate: '2026/09/23'
 ---
 
 ## はじめに
