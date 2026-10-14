@@ -88,5 +88,21 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			</article>
 		</main>
 		<Footer />
+		<script>
+			const ALLOWED_IFRAME_ORIGINS = new Set(['https://bo-yakitarako.github.io']);
+
+			window.addEventListener('message', (event) => {
+				if (!ALLOWED_IFRAME_ORIGINS.has(event.origin)) return;
+				const data = event.data;
+				if (!data || data.type !== 'random-digit-maker:resize') return;
+				document
+					.querySelectorAll('iframe[data-autoresize]')
+					.forEach((frame) => {
+						if (frame.contentWindow === event.source) {
+							frame.style.height = `${data.height}px`;
+						}
+					});
+			});
+		</script>
 	</body>
 </html>
