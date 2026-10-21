@@ -1,10 +1,16 @@
 ---
 import { SITE_TITLE } from '../consts';
+
+interface Props {
+	hideTopLink?: boolean;
+}
+
+const { hideTopLink = false } = Astro.props;
 ---
 
 <header>
 	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
+		{hideTopLink ? <h2>{SITE_TITLE}</h2> : <h2><a href="/">{SITE_TITLE}</a></h2>}
 		<button class="theme-toggle" type="button" aria-label="Toggle theme">
 			<svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" width="24" height="24">
 				<circle cx="12" cy="12" r="5" fill="currentColor"></circle>
