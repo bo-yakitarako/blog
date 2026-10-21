@@ -4,6 +4,7 @@ description: 'ころしますよ'
 heroImage: '../../assets/consulting.png'
 index: 2
 pubDate: '2026/08/07'
+hidden: true
 ---
 
 ## 憶測で物を語るのをやめろ
